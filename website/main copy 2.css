@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+ 
+#wrapper {
+	width: 900px;
+	background: silver;
+	margin: 0 auto;
+}
+ 
+#header {
+	background: black;
+	color: white;
+}
+ 
+#column-left {
+	background: red;
+	margin: 0;
+	padding: 0;
+}
+ 
+#column-center {
+	background: yellow;
+}
+ 
+#column-right {
+	background: purple;
+}
+ 
+#footer {
+	background: green;
+}
