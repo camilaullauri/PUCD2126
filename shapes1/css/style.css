@@ -54,19 +54,6 @@
 }
 
 
-.box {
-	position: relative;
-	top: 15px;
-	left: 47vw;
-	border-style: solid;
-	border-color: #000000
-	border-width: 5px;
-	display: block;
-	width: 100px;
-	height: 170px;
-	background-color: #FFFFFF;
-	transition: width 2s, height 2s, background-color 2s, transform 2s;
-}
 
 .box:hover {
 	background-color: #FFCCCC;
@@ -74,15 +61,43 @@
 	height: 200px;
 	transform: rotate(40deg); 
 }
-.zoom-box {
-	border-style:solid;
-	border-width: 1px;
-	display: block;
-	width: 100px
-	height: 100px;
-	background-color: #0000FF;
-	animation: zoom 5s infinite;
 
+
+.swing {
+    animation: swing ease-in-out 1s infinite alternate;
+    transform-origin: center -20px;
+    float:center;
+    
+}
+.swing img {
+    border: 5px solid #f8f8f8;
+    display: block;
+}
+.swing:after{
+    content: '';
+    position: absolute;  
+    width: 20px; height: 20px;  
+    border: 1px solid #999;
+    top: -10px; left: 50%;
+    z-index: 0;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(45deg);
+}
+/* nail */
+.swing:before{
+    content: '';
+    position: absolute;
+    width: 5px; height: 5px;
+    top: -14px;left: 54%;
+    z-index: 5;
+    border-radius: 50% 50%;
+    background: #000;
+}
+ 
+@keyframes swing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
 }
 
 @keyframes shake {
